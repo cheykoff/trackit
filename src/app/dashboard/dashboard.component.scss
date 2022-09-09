@@ -1,0 +1,49 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+
+  .card {
+    padding: 16px;
+
+    .mat-card {
+      background: #fafafa;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(#3f51b5, .4);
+      }
+
+      &.active {
+        animation: 3s linear infinite blink;
+        background: rgba(#3f51b5, .4);
+      }
+    }
+  }
+}
+
+.no-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 64px);
+
+  h3 {
+    font-size: 20px;
+    line-height: 32px;
+    color: #aeaeae;
+    text-align: center;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background: rgba(#3f51b5, .4);
+  }
+  50% {
+    background: rgba(#3f51b5, .1);
+  }
+  100% {
+    background: rgba(#3f51b5, .4);
+  }
+}
